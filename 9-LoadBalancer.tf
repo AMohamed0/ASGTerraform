@@ -4,9 +4,9 @@ resource "aws_lb" "app1_alb" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.app1-sg02-LB01.id]
   subnets            = [
-    aws_subnet.public-ca-central-1a.id,
-    aws_subnet.public-ca-central-1b.id,
-    aws_subnet.public-ca-central-1d.id
+    aws_subnet.public-ap-northeast-2a.id,
+    aws_subnet.public-ap-northeast-2c.id,
+    aws_subnet.public-ap-northeast-2d.id,
   ]
   enable_deletion_protection = false
 
@@ -27,4 +27,14 @@ resource "aws_lb_listener" "http" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.app1_tg.arn
   }
+
+  #   default_action {
+  #   type = "redirect"
+
+  #   redirect {
+  #     port        = "443"
+  #     protocol    = "HTTPS"
+  #     status_code = "HTTP_301"
+  #   }
+  # }
 }

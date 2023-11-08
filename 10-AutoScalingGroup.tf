@@ -2,11 +2,11 @@ resource "aws_autoscaling_group" "app1_asg" {
   name_prefix           = "app1-auto-scaling-group-"
   min_size              = 3
   max_size              = 15
-  desired_capacity      = 9
+  desired_capacity      = 6
   vpc_zone_identifier   = [
-    aws_subnet.private-ca-central-1a.id,
-    aws_subnet.private-ca-central-1b.id,
-    aws_subnet.private-ca-central-1d.id
+    aws_subnet.private-ap-northeast-2a.id,
+    aws_subnet.private-ap-northeast-2c.id,
+    aws_subnet.private-ap-northeast-2d.id,
   ]
   health_check_type          = "ELB"
   health_check_grace_period  = 300
