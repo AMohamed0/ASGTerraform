@@ -1,0 +1,11 @@
+# aws elbv2 describe-load-balancers --names "app1-load-balancer" --region ca-central-1 --query 'LoadBalancers[*].DNSName'
+
+# bas64 /path/to/file > output.txt
+
+# Base64 Encoding a File
+# To base64 encode a file
+
+# base64 /path/to/file
+# This will output a very long, base64 encoded string. You may want to write the stdout to file instead.
+
+# bas64 /path/to/file > output.txt
