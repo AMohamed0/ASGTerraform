@@ -7,7 +7,7 @@ resource "aws_subnet" "public-us-east-1a" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "public-ca-central-1a"
+    Name = "public-us-east-1a"
     Service = "application1"
     Owner = "Chewbacca"
     Planet = "Musafar"
@@ -21,7 +21,7 @@ resource "aws_subnet" "public-us-east-1d" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "public-ca-central-1b"
+    Name = "public-us-east-1d"
     Service = "application1"
     Owner = "Chewbacca"
     Planet = "Musafar"
@@ -35,7 +35,7 @@ resource "aws_subnet" "public-us-east-1c" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "public-ca-central-1c"
+    Name = "public-us-east-1c"
     Service = "application1"
     Owner = "Chewbacca"
     Planet = "Musafar"
@@ -51,7 +51,7 @@ resource "aws_subnet" "private-us-east-1a" {
   availability_zone = "us-east-1"
 
   tags = {
-    Name = "private-ca-central-1a"
+    Name = "private-us-east-1a"
     Service = "application1"
     Owner = "Chewbacca"
     Planet = "Musafar"
@@ -64,7 +64,7 @@ resource "aws_subnet" "private-us-east-1d" {
   availability_zone = "us-east-1d"
 
   tags = {
-    Name = "private-ca-central-1b"
+    Name = "private-us-east-1d"
     Service = "application1"
     Owner = "Chewbacca"
     Planet = "Musafar"
@@ -77,7 +77,7 @@ resource "aws_subnet" "private-us-east-1c" {
   availability_zone = "us-east-1c"
 
   tags = {
-    Name = "private-ca-central-1d"
+    Name = "private-us-east-1d"
     Service = "application1"
     Owner = "Chewbacca"
     Planet = "Musafar"
