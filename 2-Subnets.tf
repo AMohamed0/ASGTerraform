@@ -1,9 +1,9 @@
 #These are   for  public
 
-resource "aws_subnet" "public-ap-northeast-2a" {
+resource "aws_subnet" "public-us-east-1a" {
   vpc_id                  = aws_vpc.app1.id
   cidr_block              = "10.74.1.0/24"
-  availability_zone       = "ap-northeast-2a"
+  availability_zone       = "us-east-1"
   map_public_ip_on_launch = true
 
   tags = {
@@ -14,10 +14,10 @@ resource "aws_subnet" "public-ap-northeast-2a" {
   }
 }
 
-resource "aws_subnet" "public-ap-northeast-2d" {
+resource "aws_subnet" "public-us-east-1d" {
   vpc_id                  = aws_vpc.app1.id
   cidr_block              = "10.74.4.0/24"
-  availability_zone       = "ap-northeast-2d"
+  availability_zone       = "us-east-1d"
   map_public_ip_on_launch = true
 
   tags = {
@@ -28,10 +28,10 @@ resource "aws_subnet" "public-ap-northeast-2d" {
   }
 }
 
-resource "aws_subnet" "public-ap-northeast-2c" {
+resource "aws_subnet" "public-us-east-1c" {
   vpc_id                  = aws_vpc.app1.id
   cidr_block              = "10.74.3.0/24"
-  availability_zone       = "ap-northeast-2c"
+  availability_zone       = "us-east-1c"
   map_public_ip_on_launch = true
 
   tags = {
@@ -45,10 +45,10 @@ resource "aws_subnet" "public-ap-northeast-2c" {
 
 
 #these are for private
-resource "aws_subnet" "private-ap-northeast-2a" {
+resource "aws_subnet" "private-us-east-1a" {
   vpc_id            = aws_vpc.app1.id
   cidr_block        = "10.74.11.0/24"
-  availability_zone = "ap-northeast-2a"
+  availability_zone = "us-east-1"
 
   tags = {
     Name = "private-ca-central-1a"
@@ -58,10 +58,10 @@ resource "aws_subnet" "private-ap-northeast-2a" {
   }
 }
 
-resource "aws_subnet" "private-ap-northeast-2d" {
+resource "aws_subnet" "private-us-east-1d" {
   vpc_id            = aws_vpc.app1.id
   cidr_block        = "10.74.14.0/24"
-  availability_zone = "ap-northeast-2d"
+  availability_zone = "us-east-1d"
 
   tags = {
     Name = "private-ca-central-1b"
@@ -71,10 +71,10 @@ resource "aws_subnet" "private-ap-northeast-2d" {
   }
 }
 
-resource "aws_subnet" "private-ap-northeast-2c" {
+resource "aws_subnet" "private-us-east-1c" {
   vpc_id            = aws_vpc.app1.id
   cidr_block        = "10.74.13.0/24"
-  availability_zone = "ap-northeast-2c"
+  availability_zone = "us-east-1c"
 
   tags = {
     Name = "private-ca-central-1d"
