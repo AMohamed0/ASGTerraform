@@ -7,7 +7,7 @@ resource "aws_launch_template" "app1_LT" {
 
   vpc_security_group_ids = [aws_security_group.app1-sg01-servers.id]
 
-  user_data = "${file("output.txt")}"
+  user_data = filebase64("${path.module}/user_data.sh")
 
   tag_specifications {
     resource_type = "instance"
